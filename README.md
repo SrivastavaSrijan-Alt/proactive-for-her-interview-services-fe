@@ -1,40 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proactive For Her - Software Development Engineer I Frontend Challenge
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Welcome to our coding challenge designed to assess your practical skills in building applications with Next.js and React. This challenge allows you to showcase your ability to create structured, maintainable, and efficient code. This activity is purposely limited in scope to be respectful of your time while still enabling you to demonstrate how you approach and solve problems. If invited to an hands-on interview, you'll pair with us to extend the service you created. We'd much rather see how you work on a problem you're familiar with than on some clever whiteboard puzzle we spring on you.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+At this stage, we care most about:
+- Interpreting written specifications (following instructions)
+- Good design decisions
+- Ability to consider edge cases
+- Documentation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Expected Technologies
+You will be using Next.js and React to complete this challenge. You may use any additional libraries for state management, styling, or other purposes as you see fit.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Include a `README.md` file in your project with the following details:
+1. Instructions for installing and running your project.
+2. A summary of any build steps or dependencies.
+3. A brief explanation of the decisions made during development.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### How to Begin
+Fork this repository, create a new branch for your work, and push your progress to that branch. Please do not merge your branch into the main branch. . Do not merge the code into main. Oh, and don't squash your commits. We'd like to see the milestones of your progress. 
+When you're done, push your code to this repo and email us.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Once you are finished, send us an email with the link to your repository branch.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+&nbsp;
+## The Challenge: Users & Posts Interaction
 
-## Learn More
+Develop a Next.js application that provides interfaces for displaying users and posts, with detailed views for each.
 
-To learn more about Next.js, take a look at the following resources:
+### Tasks
+1. **List Users**: Create a page at `/users` that fetches and displays a list of users.
+2. **User Details**: Implement dynamic routing to create a page at `/users/[id]` that displays details for a specific user and all posts associated with them.
+3. **List Posts**: Create a page at `/posts` that fetches and displays a list of posts.
+4. **Post Details**: Implement dynamic routing to create a page at `/posts/[id]` that displays details for a specific post and all comments associated with it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Mock API Endpoints:
+- **List Users**: `GET https://jsonplaceholder.typicode.com/users`
+- **User Details**: `GET https://jsonplaceholder.typicode.com/users/[id]`
+- **List Posts**: `GET https://jsonplaceholder.typicode.com/posts`
+- **Post Details**: `GET https://jsonplaceholder.typicode.com/posts/[id]`
+- **Comments**: `GET https://jsonplaceholder.typicode.com/comments?postId=[id]`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Basic Wireframe Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Users Page (`/users`)
+- A simple list view showing user names.
+- Clicking on a user name navigates to the user details page.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### User Details Page (`/users/[id]`)
+- Display the user's name, email, and address.
+- Below the user's details, show a list of titles linked to their posts.
+
+### Posts Page (`/posts`)
+- A simple list view showing post titles.
+- Clicking on a post title navigates to the post details page.
+
+### Post Details Page (`/posts/[id]`)
+- Display the post's title and body.
+- Under the post's content, show a list of comments.
